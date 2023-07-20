@@ -1,0 +1,6 @@
+<svg xmlns="https://www.w3.org/TR/SVG2/" width="300" height="200">
+<g>
+<rect x="20" y="20" width="200" height="300" fill="red"></rect>
+<text x="70" y="125" font-family="Verdana" font-size="55" fill="white">abc</text>
+</g>
+</svg>
