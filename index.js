@@ -15,11 +15,14 @@
 const { Shapes, Triangle, Circle, Square } = require("./lib/shapes");
 const inquirer = require("inquirer");
 const fs = require('fs');
+const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt');
+inquirer.registerPrompt('maxlength-input', MaxLengthInputPrompt);
 const questions = [
   {
-    type: "input",
+    type: "maxlength-input",
     message: "What Text do you want in your logo? ",
     name: "logotext",
+    maxLength: 3
   },
   {
     type: "input",
@@ -67,6 +70,6 @@ inquirer
 //   });
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, (data), (err) =>
-    err ? console.log(err) : console.log("Success")
+    err ? console.log(err) : console.log(`generated File`)
   );
 }
